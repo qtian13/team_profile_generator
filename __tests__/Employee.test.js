@@ -1,12 +1,6 @@
 const Employee = require('../lib/Employee');
  
 describe('Employee', () => {
-  it('should return an object of Employee', () => {
-    // Assert
-    const employee = new Employee();
-    expect(employee).toBe('object');
-  });
-
   it('should return the name set', () => {
     // Assert
     const name = "Sandy";
@@ -46,6 +40,6 @@ describe('Employee', () => {
     // Assert
     const email = "foo@gmail.com";
     const employee = new Employee("Foo", 0, email);
-    expect(employee.getEmail).toBe(email);
+    expect(employee.getEmail()).toBe(email);
   });
 });

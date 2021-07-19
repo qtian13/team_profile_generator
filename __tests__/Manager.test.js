@@ -10,7 +10,7 @@ describe('Manager', () => {
 
   it('should return the role of Manager', () => {
     // Assert
-    const manager = new Manager("Foo", 0, "foo@gmail.com", officeNumber);
+    const manager = new Manager("Foo", 0, "foo@gmail.com", 999);
     expect(manager.getRole()).toBe('Manager');
   });
 

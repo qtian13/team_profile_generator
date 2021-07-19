@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,10 @@
     "inquirer": "^8.1.2"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "__tests__"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^26.5.2"
+  }
 }

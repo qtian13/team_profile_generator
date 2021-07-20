@@ -4,6 +4,7 @@ const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 const generateCard = require('./cardGenerator');
 const generateHtml = require('./generateHtml');
+const formatInput = require('./formatInput');
 let cardsSnippet = ``;
 
 const commonQuestions = (role) => {
@@ -26,6 +27,10 @@ const commonQuestions = (role) => {
             type: 'input',
             message: "What is " + phrase + "'s name?",
             name: 'name',
+            validate(value) {
+                const valid = value.trim().length !== 0;
+                return valid || 'Please enter the name';
+            },
         },
         {
             type: 'input',
@@ -35,7 +40,6 @@ const commonQuestions = (role) => {
                 const valid = !isNaN(parseInt(value));
                 return valid || 'Please enter a number';
             },
-            // filter: Number,
         },
         {
             type: 'input', 
@@ -94,19 +98,19 @@ const promptQuestions = (role) => {
             switch (role) {
                 case "Manager": {
                     const {name, id, email, officeNumber} = answer;
-                    const manager = new Manager(name, id, email, officeNumber);
+                    const manager = new Manager(formatInput(name), id, email, officeNumber);
                     cardsSnippet += generateCard(manager);
                     break;
                 }
                 case "Engineer": {
                     const {name, id, email, github} = answer;
-                    const engineer = new Engineer(name, id, email, github);
+                    const engineer = new Engineer(formatInput(name), id, email, github);
                     cardsSnippet += generateCard(engineer);
                     break;
                 }
                 case "Intern": {
                     const {name, id, email, school} = answer;
-                    const intern = new Intern(name, id, email, school);
+                    const intern = new Intern(formatInput(name), id, email, school);
                     cardsSnippet += generateCard(intern);
                     break;
                 }

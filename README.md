@@ -4,7 +4,7 @@ This project is to build a Node.js command-line application that takes in inform
 * [Installation](#installation)
 * [Built With](#built-with)
 * [Features](#features)
-* [File Information](#file-information)
+* [HTML Information and Screen Shot](#html-information-and-screen-shot)
 * [Demo Video URL](#demo-video-url)
 * [Demo GIF](#demo-gif)
 * [Tests](#tests)
@@ -36,8 +36,8 @@ node index.js
 8. When user click on the GitHub username, that GitHub profile opens in a new tab.
 9. The page layout is screen size responsive.
 
-## File Information
-URL: 
+## HTML Information and Screen Shot
+URL: https://github.com/qtian13/team_profile_generator/blob/main/dist/index.html
 ![fit desktop screen](assets/images/desktop_screen.png)
 
 <img src="assets/images/mobile_screen.png" alt="fit mobile screen" width="200">

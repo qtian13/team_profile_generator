@@ -7,22 +7,35 @@ main {
     max-width: 1000px;
     margin-left: auto;
     margin-right:auto;
+    padding: 10px;
 }
 
 .card {
     height: 100%;
+    background-color: rgb(226, 226, 231);
 }
 
-.card-title {
-    width: 100%;
+.card-header-title {
+    border-radius: 0.25rem;
+    display: block;
     background-color: rgb(102, 102, 150);
-    padding: 5px 10px;
+    padding: 10px;
 }
 
 .title, .subtitle {
-    color:rgb(226, 226, 231)
+    color:rgb(226, 226, 231);
 }
 
 .subtitle span{
     margin-right: 5px;
+}
+
+.panel {
+    background-color: rgba(248, 248, 250, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 85%;
+    }
 }

@@ -33,25 +33,27 @@ function generateIcon(role) {
 function generateCard(employeeAdded) {
     const role = employeeAdded.getRole();
     return `
-    <div class="column is-4">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-title">
-                    <div class="title">${employeeAdded.name}</div>
-                    <div class="subtitle"><span class="icon">${generateIcon(role)}</span>${employeeAdded.getRole()}</div>
-                </div>
-                <div class="panel">
-                    <div class="panel-block">
-                        ID: ${employeeAdded.getId()}
+            <div class="column is-4">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title">
+                            <div class="title">${employeeAdded.name}</div>
+                            <div class="subtitle"><span class="icon">${generateIcon(role)}</span>${employeeAdded.getRole()}</div>
+                        </div>
                     </div>
-                    <a class="panel-block" href="mailto:${employeeAdded.getEmail()}" target="_blank">
-                        Email: ${employeeAdded.getEmail()}
-                    </a>
-                    ${generateSpecialPanel(employeeAdded)}
+                    <div class="card-content">
+                        <div class="panel">
+                            <div class="panel-block">
+                                ID: ${employeeAdded.getId()}
+                            </div>
+                            <a class="panel-block" href="mailto:${employeeAdded.getEmail()}" target="_blank">
+                                Email: ${employeeAdded.getEmail()}
+                            </a>
+                            ${generateSpecialPanel(employeeAdded)}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>`
+            </div>`
 }
 
 module.exports = generateCard;

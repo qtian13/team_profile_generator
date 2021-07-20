@@ -19,7 +19,7 @@ function generateHtml(cardsContent) {
         </div>
     </header>
     <main>
-        <div class="columns is-flex is-flex-wrap-wrap">
+        <div class="columns is-flex-wrap-wrap is-justify-content-space-around">
             ${cardsContent}
         </div>
     </main>

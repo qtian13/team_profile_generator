@@ -18,13 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qtian13/team_profile_generator.git"
+    "url": "https://github.com/qtian13/team_profile_generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qtian13/team_profile_generator/issues"
+    "url": "https://github.com/qtian13/team_profile_generator/issues",
+    "email" : "qiushuang.tian@gmail.com"
   },
   "homepage": "https://github.com/qtian13/team_profile_generator#readme"
 }

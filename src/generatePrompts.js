@@ -1,9 +1,8 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
+const Manager = require('../lib/Manager');
 const generateCard = require('./cardGenerator');
-const Engineer = require('./Engineer');
-const Intern = require('./Intern');
-const Manager = require('./Manager');
 const generateHtml = require('./generateHtml');
 let employees = [];
 let cardsSnippet = ``;
@@ -69,7 +68,7 @@ const questionsAboutEngineer = [
     {
         type: 'input',
         message: "What is your engineer's GitHub username?",
-        name: 'username',
+        name: 'github',
     },
     {
         type: 'list',
@@ -116,13 +115,14 @@ function promptManager() {
     inquirer
         .prompt(questionsAboutManager)
         .then((answer) => {
-            employees.push(new Manager(answer.name, answer.id, answer.email, answer.officeNumber));
+            const {name, id, email, officeNumber} = answer;
+            const manager = new Manager(name, id, email, officeNumber);
+            cardsSnippet += generateCard(manager);
             if (answer.nextRole === 'Engineer') {
                 promptEngineer();
             } else if (answer.nextRole === 'Intern') {
                 promptIntern();
             } else {
-                employees.forEach(employee => cardsSnippet += generateCard(employee));
                 generateHtml(cardsSnippet);
             }
         })
@@ -132,13 +132,14 @@ function promptEngineer() {
     inquirer
         .prompt(questionsAboutEngineer)
         .then((answer) => {
-            employees.push(new Engineer(answer.name, answer.id, answer.email, answer.username));
+            const {name, id, email, github} = answer;
+            const engineer = new Engineer(name, id, email, github);
+            cardsSnippet += generateCard(engineer);
             if (answer.nextRole === 'Engineer') {
                 promptEngineer();
             } else if (answer.nextRole === 'Intern') {
                 promptIntern();
             } else {
-                employees.forEach(employee => cardsSnippet += generateCard(employee));
                 generateHtml(cardsSnippet);
             }
     })
@@ -148,13 +149,14 @@ function promptIntern() {
     inquirer
         .prompt(questionsAboutIntern)
         .then((answer) => {
-            employees.push(new Intern(answer.name, answer.id, answer.email, answer.school));
+            const {name, id, email, school} = answer;
+            const intern = new Intern(name, id, email, school);
+            cardsSnippet += generateCard(intern);
             if (answer.nextRole === 'Engineer') {
                 promptEngineer();
             } else if (answer.nextRole === 'Intern') {
                 promptIntern();
             } else {
-                employees.forEach(employee => cardsSnippet += generateCard(employee));
                 generateHtml(cardsSnippet);
             }
         })

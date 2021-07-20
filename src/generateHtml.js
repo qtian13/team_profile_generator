@@ -23,7 +23,7 @@ function generateHtml(cardsContent) {
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="../lib/generatePrompts.js"></script>
+    <script src="../src/generatePrompts.js"></script>
 </body>
 </html>`;
     writeToFile("./dist/index.html", html);

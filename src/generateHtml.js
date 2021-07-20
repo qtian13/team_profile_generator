@@ -1,5 +1,6 @@
 const fs = require('fs');
 
+// write html to index.html
 function generateHtml(cardsContent) {
     const html = `<!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,4 @@
+// generate a panel according to the role
 function generateSpecialPanel(employeeAdded) {
     switch (employeeAdded.getRole()) {
         case "Manager":
@@ -17,6 +18,7 @@ function generateSpecialPanel(employeeAdded) {
     }
 }
 
+// generate an icon according to the role
 function generateIcon(role) {
     switch (role) {
         case "Manager":
@@ -30,6 +32,7 @@ function generateIcon(role) {
     }
 }
 
+// generate a card with the employee infomation
 function generateCard(employeeAdded) {
     const role = employeeAdded.getRole();
     return `

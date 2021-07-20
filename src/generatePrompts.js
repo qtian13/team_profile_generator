@@ -7,6 +7,7 @@ const generateHtml = require('./generateHtml');
 const formatInput = require('./formatInput');
 let cardsSnippet = ``;
 
+// generate an array of common questions according to the role
 const commonQuestions = (role) => {
     let phrase;
     switch (role) {
@@ -49,6 +50,7 @@ const commonQuestions = (role) => {
     ]
 };
 
+// generate special question according to the role
 const specialQuesion = (role) => {
     switch (role) {
         case "Manager":
@@ -78,6 +80,7 @@ const specialQuesion = (role) => {
     }
 }
 
+// generate an array of questions according to the role
 const questions = (role) => {
     return [
         ...commonQuestions(role),
@@ -91,6 +94,7 @@ const questions = (role) => {
     ];
 }
 
+// prompt questions according to the role
 const promptQuestions = (role) => {
     inquirer
         .prompt(questions(role))
@@ -126,6 +130,7 @@ const promptQuestions = (role) => {
         })
 }
 
+// init values and start to prompt questions
 const generatePrompts = () => {
     employees = [];
     cardsSnippet = ``;

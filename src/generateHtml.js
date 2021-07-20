@@ -16,7 +16,7 @@ function generateHtml(cardsContent) {
 <body>
     <header class="hero">
         <div class="hero-body">
-            <h1 class="title has-text-centered">Team Profile</h1>
+            <h1 class="title has-text-centered is-1">Team Profile</h1>
         </div>
     </header>
     <main>
@@ -32,7 +32,7 @@ function generateHtml(cardsContent) {
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => 
-        err? console.log(err) : console.log('Success!'));
+        err? console.log(err) : console.log('Success! Please check the file ./dist/index.html'));
 }
 
 module.exports = generateHtml;

@@ -1,7 +1,7 @@
 {
   "name": "team_profile_generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. ## Table of Contents * [Installation](#installation) * [Built With](#built-with) * [Features](#features) * [File Information](#file-information) * [Demo Video URL](#demo-video-url) * [Demo GIF](#demo-gif) * [Tests](#tests) * [Questions](#questions) * [Acknowledgments](#acknowledgments) ## Installation ```console git clone https://github.com/qtian13/team_profile_generator.git npm init -y npm i inquirer node index.js ``` ## Built With * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) * [Bulma](https://bulma.io/) * [JavaScript](https://www.javascript.com/) * [NodeJS](https://nodejs.org/en/) * [npm](https://www.npmjs.com/)",
   "main": "index.js",
   "directories": {
     "lib": "lib"

@@ -134,6 +134,7 @@ const promptQuestions = (role) => {
 const generatePrompts = () => {
     employees = [];
     cardsSnippet = ``;
+    console.log("Start to generate team profile");
     promptQuestions("Manager");
 };
 

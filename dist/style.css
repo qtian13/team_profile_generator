@@ -1,0 +1,28 @@
+.hero {
+    background-color: rgb(102, 102, 150);
+    margin-bottom: 40px;
+}
+
+main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-title {
+    width: 100%;
+    background-color: rgb(102, 102, 150);
+    padding: 5px 10px;
+}
+
+.title, .subtitle {
+    color:rgb(226, 226, 231)
+}
+
+.subtitle span{
+    margin-right: 5px;
+}

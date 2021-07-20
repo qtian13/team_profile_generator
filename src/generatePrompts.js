@@ -128,6 +128,4 @@ const generatePrompts = () => {
     promptQuestions("Manager");
 };
 
-module.exports = {
-    generatePrompts,
-};
+module.exports = generatePrompts;

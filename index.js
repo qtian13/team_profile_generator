@@ -1,7 +1,7 @@
-const promptsGenerator = require('./src/generatePrompts.js');
+const generatePrompts = require('./src/generatePrompts.js');
 
 function init() {
-    promptsGenerator.generatePrompts();
+    generatePrompts();
 }
 
 init();

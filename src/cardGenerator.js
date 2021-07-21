@@ -3,16 +3,16 @@ function generateSpecialPanel(employeeAdded) {
     switch (employeeAdded.getRole()) {
         case "Manager":
             return `<div class="panel-block">
-                        OfficeNumber: ${employeeAdded.getOfficeNumber()}
-                    </div>`
+                                OfficeNumber: ${employeeAdded.getOfficeNumber()}
+                            </div>`
         case "Engineer":
             return `<a class="panel-block" href="https://github.com/${employeeAdded.getGithub()}" target="_blank">
-                        GitHub: ${employeeAdded.getGithub()}
-                    </a>`
+                                GitHub: ${employeeAdded.getGithub()}
+                            </a>`
         case "Intern":
             return `<div class="panel-block">
-                        School: ${employeeAdded.getSchool()}
-                    </div>`
+                                School: ${employeeAdded.getSchool()}
+                            </div>`
         default:
             return ``;
     }

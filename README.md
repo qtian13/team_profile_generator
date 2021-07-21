@@ -1,15 +1,18 @@
 # Team Profile Generator
 This project is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+
 ## Table of Contents
 * [Installation](#installation)
 * [Built With](#built-with)
 * [Features](#features)
 * [HTML Information and Screen Shot](#html-information-and-screen-shot)
+* [Tests](#tests)
 * [Demo Video URL](#demo-video-url)
 * [Demo GIF](#demo-gif)
-* [Tests](#tests)
+* [Author](#author)
 * [Questions](#questions)
 * [Acknowledgments](#acknowledgments)
+
 ## Installation
 ```console
 git clone https://github.com/qtian13/team_profile_generator.git
@@ -30,6 +33,7 @@ node index.js
 2. After enter all the answers, the user is presented with a menu with options to add an engineer or an intern or to finish building their team.
 3. When user select the engineer option, they are prompted to enter the engineer’s name, ID, email, and GitHub username, and then taken back to the menu.
 4. When user select the intern option, they are prompted to enter the intern’s name, ID, email, and school, and then taken back to the menu.
+5. The answer to the names are formatted automatically.
 5. When user decide to finish building their team, then they exit the application, and the HTML that displays a nicely formatted team roster based on the answers would be generated.
 6. The path to HTML file is ./dist/index.html.
 7. When user click on an email address in the HTML, then their default email program opens and populates the TO field of the email with the address
@@ -47,8 +51,10 @@ URL: https://github.com/qtian13/team_profile_generator/blob/main/dist/index.html
 npm test
 ```
 
+<img src="assets/images/test.png" alt="test result" width="200">
+
 ## Demo Video URL
-https://drive.google.com/file/d/1ceHfjiIAoxS3626KpedoWYaerQ1dR7rv/view
+https://drive.google.com/file/d/1TRjpgniURL9owI9hZZFMoQY0Nicmf6DB/view
 
 ## Demo GIF
 ![Team Profile Generator Demo](assets/images/demo.gif)

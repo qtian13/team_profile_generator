@@ -102,19 +102,19 @@ const promptQuestions = (role) => {
             switch (role) {
                 case "Manager": {
                     const {name, id, email, officeNumber} = answer;
-                    const manager = new Manager(formatInput(name), id, email, officeNumber);
+                    const manager = new Manager(formatInput(name), id.trim(), email.trim(), officeNumber.trim());
                     cardsSnippet += generateCard(manager);
                     break;
                 }
                 case "Engineer": {
                     const {name, id, email, github} = answer;
-                    const engineer = new Engineer(formatInput(name), id, email, github);
+                    const engineer = new Engineer(formatInput(name), id.trim(), email.trim(), github.trim());
                     cardsSnippet += generateCard(engineer);
                     break;
                 }
                 case "Intern": {
                     const {name, id, email, school} = answer;
-                    const intern = new Intern(formatInput(name), id, email, school);
+                    const intern = new Intern(formatInput(name), id.trim(), email.trim(), school.trim());
                     cardsSnippet += generateCard(intern);
                     break;
                 }
